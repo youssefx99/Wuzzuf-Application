@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02E6B178-08BF-42AB-803B-A3FA2D102FAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Wuzzuf</RootNamespace>
+    <AssemblyName>Wuzzuf</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\..\..\..\..\..\app\pc\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Add Or Edit Post\AddOrEditPosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Add Or Edit Post\AddOrEditPosts.Designer.cs">
+      <DependentUpon>AddOrEditPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Add Or Edit Post\addPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Add Or Edit Post\addPost.Designer.cs">
+      <DependentUpon>addPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Add Or Edit Post\EditPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Add Or Edit Post\EditPost.Designer.cs">
+      <DependentUpon>EditPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\EmployerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\EmployerProfile.Designer.cs">
+      <DependentUpon>EmployerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Handle Applications\send_comment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Handle Applications\send_comment.Designer.cs">
+      <DependentUpon>send_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\view_notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\view_notifications.Designer.cs">
+      <DependentUpon>view_notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gvariales.cs" />
+    <Compile Include="Dashboards\Employer Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Dashboard.Designer.cs">
+      <DependentUpon>Employer Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employer.cs" />
+    <Compile Include="Report1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sign Up\EmployerSU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign Up\EmployerSU.Designer.cs">
+      <DependentUpon>EmployerSU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\Job_Search\apply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\Job_Search\apply.Designer.cs">
+      <DependentUpon>apply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\Job_Search\search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\Job_Search\search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\Job_Search\show_job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\Job_Search\show_job.Designer.cs">
+      <DependentUpon>show_job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dashboards\Seeker Dasobard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Dasobard.Designer.cs">
+      <DependentUpon>Seeker Dasobard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\SeekerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Seeker Functionalitites\SeekerProfile.Designer.cs">
+      <DependentUpon>SeekerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sign Up\SeekerSU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign Up\SeekerSU.Designer.cs">
+      <DependentUpon>SeekerSU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Handle Applications\show_application.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Handle Applications\show_application.Designer.cs">
+      <DependentUpon>show_application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sign In\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign In\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sign Up\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign Up\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Handle Applications\view_applications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Employer Functionalities\Handle Applications\view_applications.Designer.cs">
+      <DependentUpon>view_applications.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Functionalities\Add Or Edit Post\AddOrEditPosts.resx">
+      <DependentUpon>AddOrEditPosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Functionalities\Add Or Edit Post\addPost.resx">
+      <DependentUpon>addPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Functionalities\Add Or Edit Post\EditPost.resx">
+      <DependentUpon>EditPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Dashboard.resx">
+      <DependentUpon>Employer Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Functionalities\Handle Applications\send_comment.resx">
+      <DependentUpon>send_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Seeker Functionalitites\view_notifications.resx">
+      <DependentUpon>view_notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.resx">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign Up\EmployerSU.resx">
+      <DependentUpon>EmployerSU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Functionalities\EmployerProfile.resx">
+      <DependentUpon>EmployerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Seeker Functionalitites\Job_Search\apply.resx">
+      <DependentUpon>apply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Seeker Functionalitites\Job_Search\search.resx">
+      <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Seeker Functionalitites\Job_Search\show_job.resx">
+      <DependentUpon>show_job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboards\Seeker Dasobard.resx">
+      <DependentUpon>Seeker Dasobard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Seeker Functionalitites\SeekerProfile.resx">
+      <DependentUpon>SeekerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign Up\SeekerSU.resx">
+      <DependentUpon>SeekerSU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Functionalities\Handle Applications\show_application.resx">
+      <DependentUpon>show_application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign In\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign Up\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Employer Functionalities\Handle Applications\view_applications.resx">
+      <DependentUpon>view_applications.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
